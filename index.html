@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,111 @@
   <link rel="stylesheet" href="style.css">
   <script src="./app.js"></script>
 
+  <!-- slideshow link -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+
   <title>Organic food</title>
 </head>
-<body>
 
+<body class="clearfix">
+
+  <!-- checkbox and hambi menü -->
+  <input type="checkbox" id="toggle" class="menu-checkbox" />
+  <label for="toggle" class="toggle-label"><i class="fas fa-bars"></i> </label>
+
+  <header>
+    <!-- menü -->
+    <nav>
+      <div class="upper-nav-bar">
+        <div class="opening-hours">Opening hours <i class="fas fa-clock"></i> <time>07:00 AM-11:10 PM</time></div>
+        <div class="account"><a href="#">My Account</a> <i class="fas fa-shopping-cart"></i> </div>
+      </div>
+      <div class="lower-nav-bar">
+        <div class="logo-container">
+          <img class="logo" src="img/organic_logo.png" alt="" />
+        </div>
+        <div class="menu-container">
+          <ul class="menu">
+            <li class="menu-item"><a href="#">Home</a></li>
+            <li class="menu-item"><a href="#">About us</a></li>
+            <li class="menu-item"><a href="#">Shop</a></li>
+            <li class="menu-item"><a href="#">Our Team</a></li>
+            <li class="menu-item"><a href="#">Blog</a></li>
+            <li class="menu-item"><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="search-bar"><a href="#"></a><i class="fas fa-search"></i></div>
+      </div>
+    </nav>
+
+    <!-- banner slide show -->
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <!-- <div class="banner-text">""</div> -->
+          <img class="banner-image" src="img//banner_image_1.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <!-- <div class="banner-text">""</div> -->
+          <img class="banner-image" src="img/banner_image_3.jpg" alt="" />
+        </div>
+        <!-- <div class="swiper-slide">
+        <div class="banner-text">""</div>
+        <img class="banner-image" src="img/banner_image_4.jpg" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <div class="banner-text">""</div>
+        <img class="banner-image" src="img/banner_image_5.jpg" alt="" />
+      </div> -->
+      </div>
+    </div>
+
+
+    <!-- welcome message -->
+
+    <div class="welcome-message">
+      <div class="main-logo" src="img/banner_logo150.png" alt=""></div>
+      <h1>Drink The life like juice</h1>
+      <div class="order-button"><a href="#"></a>Shop now</div>
+    </div>
+
+  </header>
+
+  <main>
+    <h2>Welcome To Super Organic Food</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, veritatis. Consequatur, sapiente quo enim,
+      excepturi quis deserunt autem expedita ipsum maxime modi molestias voluptates perspiciatis, illum quisquam. Est,
+      architecto fugiat.</p>
+
+    <div class="offers">
+      <div class="offer1">100% Natural
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo temporibus velit labore ad quis nemo,
+          dignissimos laboriosam.</p>
+      </div>
+      <div class="offer3">100% Natural
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sapiente earum, voluptatum distinctio pariatur a
+          architecto necessitatibus.</p>
+      </div>
+      <div class="offer3">100% Natural
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa omnis recusandae excepturi a corporis,
+          distinctio accusamus voluptatibus! </p>
+      </div>
+    </div>
+  </main>
+
+  <div class="bye-pic">
+    <img class="filter" src="img/banner_image_2.jpg" alt="" />
+  </div>
+
+  <footer>&copy; Copyright 2021</footer>
 
 </body>
+
 </html>
