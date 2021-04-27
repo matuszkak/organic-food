@@ -168,26 +168,65 @@ nav {
   transition: background-color 1s ease-out;
 }
 
-.filter {
+/* .filter {
+  filter: brightness(50%);
+} */
+
+/* banner  */
+
+.banner-image {
+  width: 100%;
+  max-height: auto;
   filter: brightness(50%);
 }
 
-/* banner  */
-.banner-image {
-  width: 100%;
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+}
+
+.main-logo {
+  max-width: 20rem;
+  height: 10rem;
+  padding-top: 1rem;
+  margin: 0;
+  text-align: center;
+  position: absolute;
+  color: white;
+  z-index: 2;
+  top: 15vw;
+}
+
+.welcome-message h1 {
+  position: absolute;
+  margin: 0;
+  text-align: center;
+  color: white;
+  z-index: 2;
+  top: 25vw;
 }
 
 .order-button {
   position: absolute;
-  top: 33vw;
-  right: calc(50% - 75px);
-  width: 150px;
-  padding: 10px 0;
   text-align: center;
-  border-radius: 200px;
-  background-color: #4c5bd0;
-  box-shadow: 0 0 22px -1px rgba(0, 0, 0, 0.75);
   z-index: 1;
+  top: 35vw;
+  right: calc(50% - 150px);
+  width: 300px;
+  padding: 10px 0;
+  font-size: 2rem;
+  font-weight: normal;
+  font-variant: small-caps;
+  border-radius: 40px;
+  background-color: rgb(67, 236, 67);
+  box-shadow: 0 0 22px -1px rgba(0, 0, 0, 0.75);
+}
+
+.order-button a {
+  text-decoration: none;
+  color: white;
 }
 
 footer {
@@ -197,14 +236,14 @@ footer {
   margin-top: 20px;
 }
 
-@media (max-width: 1400px) {
+/* responsivity */
+
+/* @media (max-width: 1400px) {
   .toggle-label {
     display: block;
     font-size: 2rem;
     cursor: pointer;
     margin-left: auto;
-
-    /* lefelé mozdítja */
   }
 
   .menu-checkbox:checked ~ .menu-container {
@@ -227,3 +266,4 @@ footer {
     padding-left: 3rem;
   }
 }
+} */

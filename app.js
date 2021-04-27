@@ -10,6 +10,9 @@ const swiper = new Swiper('.swiper-container', {
     crossFade: true
   },
   autoplay: {
-    delay: 300,
+    delay: 3000,
+  },
+  pagination: {
+    el: '.swiper-pagination',
   },
 });
