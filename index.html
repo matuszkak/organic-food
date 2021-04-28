@@ -6,11 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./fonts/font-awesome/css/fontawesome-all.css">
   <link rel="stylesheet" href="style.css">
-  <script src="./app.js"></script>
 
   <!-- slideshow link -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- smoothscroll -->
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
 
   <!-- fontawesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -54,65 +56,73 @@
 
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <!-- Slides -->
+
         <div class="swiper-slide">
-          <!-- <div class="banner-text">""</div> -->
           <img class="banner-image" src="img//banner_image_1.jpg" alt="" />
         </div>
         <div class="swiper-slide">
-          <!-- <div class="banner-text">""</div> -->
+
+          <img class="banner-image" src="img//banner_image_5.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+
           <img class="banner-image" src="img/banner_image_3.jpg" alt="" />
         </div>
-        <!-- <div class="swiper-slide">
-        <div class="banner-text">""</div>
-        <img class="banner-image" src="img/banner_image_4.jpg" alt="" />
       </div>
-      <div class="swiper-slide">
-        <div class="banner-text">""</div>
-        <img class="banner-image" src="img/banner_image_5.jpg" alt="" />
-      </div> -->
-      </div>
+      <div class="swiper-pagination"></div>
     </div>
-
 
     <!-- welcome message -->
 
     <div class="welcome-message">
-      <div class="main-logo" src="img/banner_logo150.png" alt=""></div>
-      <h1>Drink The life like juice</h1>
-      <div class="order-button"><a href="#"></a>Shop now</div>
+      <img class="main-logo" src="img/banner_logo.png" alt="" />
+
+
+      <div class="welcome-text">
+        <h1>Drink The life like juice</h1>
+      </div>
+      <div id="reserve" class="order-button"><a data-scroll href="#reserve">Shop now</a></div>
+
     </div>
 
   </header>
 
   <main>
-    <h2>Welcome To Super Organic Food</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, veritatis. Consequatur, sapiente quo enim,
-      excepturi quis deserunt autem expedita ipsum maxime modi molestias voluptates perspiciatis, illum quisquam. Est,
-      architecto fugiat.</p>
+    <div class="offer-title">
+      <h2>Welcome To Super Organic Food</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, veritatis. Consequatur, sapiente quo enim,
+        excepturi quis deserunt autem expedita ipsum maxime modi molestias voluptates perspiciatis, illum quisquam. Est,
+        architecto fugiat.</p>
+    </div>
 
-    <div class="offers">
-      <div class="offer1">100% Natural
+    <div class="offer-container">
+      <div class="offer1-container">
+        <i class="fa fa-globe" aria-hidden="true"></i>
+        <h3>100% Natural</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo temporibus velit labore ad quis nemo,
           dignissimos laboriosam.</p>
       </div>
-      <div class="offer3">100% Natural
+      <div class="offer2-container">
+        <i class="fa fa-recycle" aria-hidden="true"></i>
+        <h3>100% Natural</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sapiente earum, voluptatum distinctio pariatur a
           architecto necessitatibus.</p>
       </div>
-      <div class="offer3">100% Natural
+      <div class="offer3-container">
+        <i class="fa fa-id-badge" aria-hidden="true"></i>
+        <h3>100% Natural</h3>
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa omnis recusandae excepturi a corporis,
           distinctio accusamus voluptatibus! </p>
       </div>
     </div>
   </main>
 
-  <div class="bye-pic">
-    <img class="filter" src="img/banner_image_2.jpg" alt="" />
+  <div class="bye-pic-container">
+    <img class="bye-pic" src="img/banner_image_2.jpg" alt="" />
   </div>
 
   <footer>&copy; Copyright 2021</footer>
-
+  <script src="./app.js"></script>
 </body>
 
 </html>

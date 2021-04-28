@@ -3,14 +3,15 @@ html {
 }
 
 /* https://developer.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/ */
+
 .offscreen {
   clip-path: inset(100%);
-  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
-  white-space: nowrap; /* added line */
+  white-space: nowrap;
   width: 1px;
 }
 
@@ -123,7 +124,7 @@ nav {
 
 .logo {
   max-width: 20rem;
-  padding-top: 1rem;
+  padding-top: 1.2rem;
   padding-left: 3.5rem;
   text-align: center;
 }
@@ -153,7 +154,8 @@ nav {
 }
 
 .menu-item {
-  padding-left: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .menu-item a {
@@ -164,66 +166,289 @@ nav {
 }
 
 .menu-item:hover {
-  background-color: rgba(189, 198, 233, 0.56);
+  background-color: rgba(227, 230, 238, 0.3);
   transition: background-color 1s ease-out;
+  border-top: 4px solid rgb(44, 112, 90);
+  border-radius: 50%;
 }
 
-.filter {
-  filter: brightness(50%);
+.darken1 {
+  background-color: rgb(44, 112, 90);
+}
+
+.darken2 {
+  background-color: rgb(23, 146, 107);
+  opacity: 95%;
 }
 
 /* banner  */
+
 .banner-image {
   width: 100%;
+  height: 48vw;
+  object-fit: cover;
+  object-position: 100% 0;
+  filter: brightness(50%);
+}
+
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+}
+
+.main-logo {
+  position: absolute;
+  max-width: 20rem;
+  height: 10rem;
+  padding-top: 1rem;
+  color: white;
+  z-index: 1;
+  top: 18vw;
+}
+
+.welcome-text {
+  position: absolute;
+  z-index: 1;
+  top: 27vw;
+}
+
+.welcome-text h1 {
+  font-size: 4rem;
+
+  /* font-weight: lighter; */
+  color: white;
 }
 
 .order-button {
   position: absolute;
-  top: 33vw;
-  right: calc(50% - 75px);
-  width: 150px;
-  padding: 10px 0;
   text-align: center;
-  border-radius: 200px;
-  background-color: #4c5bd0;
-  box-shadow: 0 0 22px -1px rgba(0, 0, 0, 0.75);
   z-index: 1;
+  top: 38vw;
+  right: calc(50% - 125px);
+  width: 250px;
+  padding: 10px 0;
+  font-size: 2rem;
+  font-weight: normal;
+  font-variant: small-caps;
+  border-radius: 40px;
+  background-color: rgb(67, 236, 67);
+  box-shadow: 0 0 22px -1px rgba(0, 0, 0, 0.75);
+}
+
+.order-button a {
+  text-decoration: none;
+  color: white;
+}
+
+/* középső rész */
+
+h2 {
+  text-align: center;
+  color: black;
+  font-size: 3rem;
+  font-weight: bolder;
+  padding-bottom: 1vw;
+}
+
+.offer-title p {
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+  line-height: 2;
+  font-weight: normal;
+  padding: 0 20vw 2vw 20vw;
+}
+
+.offer-container {
+  display: flex;
+  align-items: center;
+  top: 0;
+  justify-content: center;
+}
+
+.offer1-container,
+.offer2-container,
+.offer3-container {
+  display: block;
+  width: 20vw;
+  background-color: white;
+  margin: 2vw;
+  text-align: center;
+
+  /* box-shadow: 0, 0, 15px, 15px, red; */
+}
+
+.offer1-container > i,
+.offer2-container > i,
+.offer3-container > i {
+  font-size: 4rem;
+  padding-top: 5vw;
+}
+
+.offer1-container > h3,
+.offer2-container > h3,
+.offer3-container > h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: rgb(22, 119, 22);
+}
+
+.offer1-container > p,
+.offer2-container > p,
+.offer3-container > p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: rgb(22, 119, 22);
+  padding: 3vw;
+}
+
+/* záró rész */
+
+.bye-pic-container {
+  width: 100%;
+  height: 25vw;
+  overflow: hidden;
+}
+
+.bye-pic {
+  width: 100%;
+  height: 40vw;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 footer {
-  padding: 40px 0;
-  background-color: #bbb;
+  font-size: 1.5rem;
+  padding-top: 2vw;
+  padding-bottom: 5vw;
   text-align: center;
   margin-top: 20px;
 }
 
-@media (max-width: 1400px) {
+/* responsivity */
+
+@media (max-width: 1000px) {
   .toggle-label {
     display: block;
     font-size: 2rem;
     cursor: pointer;
     margin-left: auto;
+  }
 
-    /* lefelé mozdítja */
+  .menu-container {
+    display: none;
   }
 
   .menu-checkbox:checked ~ .menu-container {
     display: block;
   }
 
-  .menu-container {
-    display: none;
-  }
-}
-
-@media (max-width: 1000px) {
-  .upper-nav-bar,
-  .lower-nav-bar {
-    font-size: 1.5rem;
+  .banner-image {
+    width: 100%;
+    height: 65vw;
+    object-fit: cover;
+    object-position: 50% 50%;
+    filter: brightness(50%);
   }
 
-  .logo {
-    max-width: 15rem;
-    padding-left: 3rem;
+  .main-logo {
+    max-width: 10rem;
+    height: 5 rem;
+    top: 28vw;
+  }
+
+  .welcome-text {
+    top: 45vw;
+  }
+
+  .welcome-text h1 {
+    font-size: 2rem;
+  }
+
+  .order-button {
+    top: 55vw;
+  }
+
+  .offer-container {
+    flex-wrap: wrap;
+  }
+
+  .offer1-container,
+  .offer2-container,
+  .offer3-container {
+    display: block;
+    width: 35vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
+
+  @media (max-width: 700px) {
+    .upper-nav-bar,
+    .lower-nav-bar {
+      font-size: 1.5rem;
+    }
+
+    .logo {
+      max-width: 15rem;
+      padding-left: 3rem;
+    }
+
+    .banner-image {
+      width: 100%;
+      height: 166vw;
+      object-fit: cover;
+      object-position: 50% 50%;
+      filter: brightness(50%);
+    }
+
+    .main-logo {
+      max-width: 20rem;
+      height: 10 rem;
+      top: 75vw;
+    }
+
+    .welcome-text {
+      position: absolute;
+      z-index: 1;
+      top: 100vw;
+    }
+
+    .welcome-text h1 {
+      font-size: 4rem;
+      padding-left: 20vw;
+      padding-right: 20vw;
+      text-align: center;
+    }
+
+    .order-button {
+      top: 150vw;
+    }
+
+    .offer-container {
+      flex-direction: column;
+    }
+
+    .offer1-container,
+    .offer2-container,
+    .offer3-container {
+      display: block;
+      width: 60vw;
+      padding-top: 10vw;
+      padding-bottom: 10vw;
+    }
+
+    .bye-pic-container {
+      width: 100%;
+      height: 100vw;
+    }
+
+    .bye-pic {
+      width: 100%;
+      height: 150vw;
+      object-fit: cover;
+      object-position: 80% 80%;
+    }
   }
 }
