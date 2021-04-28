@@ -124,7 +124,7 @@ nav {
 
 .logo {
   max-width: 20rem;
-  padding-top: 1rem;
+  padding-top: 1.2rem;
   padding-left: 3.5rem;
   text-align: center;
 }
@@ -169,6 +169,16 @@ nav {
   transition: background-color 1s ease-out;
 }
 
+.darken1 {
+  background-color: rgb(44, 112, 90);
+}
+
+.darken2 {
+  background-color: rgb(23, 146, 107);
+  opacity: 95%;
+}
+
+
 /* banner  */
 
 .banner-image {
@@ -190,14 +200,14 @@ nav {
   height: 10rem;
   padding-top: 1rem;
   color: white;
-  z-index: 2;
-  top: 15vw;
+  z-index: 1;
+  top: 20vw;
 }
 
 .welcome-text {
   position: absolute;
-  z-index: 2;
-  top: 25vw;
+  z-index: 1;
+  top: 30vw;
 }
 
 .welcome-text h1 {
@@ -211,7 +221,7 @@ nav {
   position: absolute;
   text-align: center;
   z-index: 1;
-  top: 35vw;
+  top: 38vw;
   right: calc(50% - 125px);
   width: 250px;
   padding: 10px 0;
@@ -263,6 +273,8 @@ h2 {
   background-color: white;
   margin: 2vw;
   text-align: center;
+
+  /* box-shadow: 0, 0, 15px, 15px, red; */
 }
 
 .offer1-container > i,
@@ -302,8 +314,8 @@ h2 {
 }
 
 footer {
-  padding: 40px 0;
-  background-color: #bbb;
+  padding-top: 2vw;
+  padding-bottom: 10vw;
   text-align: center;
   margin-top: 20px;
 }
