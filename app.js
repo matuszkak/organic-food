@@ -12,9 +12,6 @@ const swiper = new Swiper('.swiper-container', {
   autoplay: {
     delay: 3000,
   },
-  pagination: {
-    el: '.swiper-pagination',
-  },
 });
 
 //smooth acroll a shop gomb megnyomásakor
