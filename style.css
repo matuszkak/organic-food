@@ -163,11 +163,14 @@ nav {
   height: 2rem;
 }
 
-.menu-item:hover {
-  background-color: rgba(227, 230, 238, 0.3);
-  transition: background-color 1s ease-out;
-  border-top: 4px solid rgb(44, 112, 90);
-  border-radius: 50%;
+.order-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-item a:hover {
+  color: black;
+  transition: color 0.5 ease-out;
 }
 
 .darken1 {
@@ -235,9 +238,8 @@ nav {
   box-shadow: 0 0 22px -1px rgba(0, 0, 0, 0.75);
 }
 
-.order-button a {
-  text-decoration: none;
-  color: white;
+.order-button a:hover {
+  color: black;
 }
 
 /* középső rész */
@@ -274,15 +276,16 @@ h2 {
   background-color: white;
   margin: 2vw;
   text-align: center;
-
-  /* box-shadow: 0, 0, 15px, 15px, red; */
+  box-shadow: 0 0 12px 6px #888;
 }
 
 .offer1-container > i,
 .offer2-container > i,
 .offer3-container > i {
-  font-size: 4rem;
+  font-size: 6rem;
   padding-top: 5vw;
+  color: rgb(22, 119, 22);
+  opacity: 70%;
 }
 
 .offer1-container > h3,
@@ -327,9 +330,29 @@ footer {
 
 /* responsivity */
 
+@media (max-width: 1001px) {
+  .menu-container {
+    display: block;
+    background-color: none;
+  }
+}
+
 @media (max-width: 1000px) {
   .menu-container {
     display: none;
+    background-color: rgb(67, 236, 67);
+    position: absolute;
+    top: auto;
+    right: 0;
+  }
+
+  .menu-item a {
+    padding-bottom: 1vw;
+    justify-content: flex-end;
+  }
+
+  .menu-item:hover {
+    border-bottom: 2px solid rgb(44, 112, 90);
   }
 
   .upper-nav-bar {
@@ -361,18 +384,8 @@ footer {
     opacity: 0%;
   }
 
-  .menu-container {
-    position: absolute;
-    top: 25vw;
-    right: 7vw;
-  }
-
   .menu {
     flex-direction: column;
-  }
-
-  .menu-item a {
-    justify-content: flex-end;
   }
 
   .banner-image {
@@ -481,13 +494,14 @@ footer {
       object-position: 80% 80%;
     }
   }
-}
 
-.js-hide {
-  display: none;
-}
+  .js-hide {
+    display: none;
+  }
 
-.js-show {
-  display: block;
-  background-color: red;
+  .js-show {
+    display: block;
+
+    /* background-color: rgb(67, 236, 67); */
+  }
 }
