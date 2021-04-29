@@ -489,4 +489,5 @@ footer {
 
 .js-show {
   display: block;
+  background-color: red;
 }
