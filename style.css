@@ -71,17 +71,15 @@ body {
   background-color: lightgrey;
 }
 
-/* checkbox és hambi menü elrejtése induláskor */
-.menu-checkbox,
-.toggle-label {
-  display: none;
-}
-
 nav {
   position: fixed;
   margin-bottom: -8vw;
   width: 100%;
   z-index: 2;
+}
+
+.hambi {
+  display: none;
 }
 
 .upper-nav-bar {
@@ -330,19 +328,51 @@ footer {
 /* responsivity */
 
 @media (max-width: 1000px) {
-  .toggle-label {
-    display: block;
-    font-size: 2rem;
-    cursor: pointer;
-    margin-left: auto;
-  }
-
   .menu-container {
     display: none;
   }
 
-  .menu-checkbox:checked ~ .menu-container {
+  .upper-nav-bar {
+    grid-template-columns: [start] 10vw [logostart] 51vw [logoend] 23vw [hambistart] 6vw [hambiend] 10vw [end];
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    font-size: 2rem;
+    color: white;
+    font-weight: normal;
+  }
+
+  .opening-hours {
+    grid-column: logostart / logoend;
+    text-align: left;
+  }
+
+  .account {
+    grid-column: logoend / hambistart;
+    text-align: end;
+  }
+
+  .hambi {
     display: block;
+    grid-column: hambistart / hambiend;
+    text-align: end;
+  }
+
+  .hambi a {
+    opacity: 0%;
+  }
+
+  .menu-container {
+    position: absolute;
+    top: 25vw;
+    right: 7vw;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu-item a {
+    justify-content: flex-end;
   }
 
   .banner-image {
@@ -379,7 +409,7 @@ footer {
   .offer2-container,
   .offer3-container {
     display: block;
-    width: 35vw;
+    width: 20vw;
     padding-top: 5vw;
     padding-bottom: 5vw;
   }
@@ -387,7 +417,7 @@ footer {
   @media (max-width: 700px) {
     .upper-nav-bar,
     .lower-nav-bar {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
 
     .logo {
@@ -451,4 +481,12 @@ footer {
       object-position: 80% 80%;
     }
   }
+}
+
+.js-hide {
+  display: none;
+}
+
+.js-show {
+  display: block;
 }

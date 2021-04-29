@@ -29,3 +29,24 @@ window.addEventListener('scroll', function () {
     document.querySelector('.lower-nav-bar').classList.remove('darken2');
   }
 });
+
+document.querySelector('.hambi').addEventListener('click', function () {
+  console.log('clicked!');
+
+  document.querySelector('.menu-container').classList.add('js-show');
+});
+
+
+// var desiredElement = document.querySelectorAll('.hambi');
+// clicked = true;
+// function switchTheme() {
+//   for (var i = 0; i < desiredElement.length; i++) {
+//     if (desiredElement[i].classList.contains('js-show')) {
+//       desiredElement[i].classList.remove('js-show');
+//       desiredElement[i].classList.add('js-hide');
+//     } else if (desiredElement[i].classList.contains('js-hide')) {
+//       desiredElement[i].classList.remove('js-hide');
+//       desiredElement[i].classList.add('js-show');
+//     }
+//   }
+// }
